@@ -89,5 +89,4 @@ public class Turn {
 	public void SetMoveType(MoveType type) {
 		MoveType = type;
 	}
-
 }

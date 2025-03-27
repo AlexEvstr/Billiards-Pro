@@ -9,6 +9,7 @@ TagManager:
   - Pocket
   - AIPocketDetector
   - Panel
+  - checker
   layers:
   - Default
   - TransparentFX

@@ -64,7 +64,7 @@ public class Table : MonoBehaviour {
 	}
 
 	private void SetProperties(TableProperties properties) {
-		SetTableSprite (properties.TableSprite);
+		//SetTableSprite (properties.TableSprite);
 	}
 
 	private void SetTableSprite(Sprite sprite) {

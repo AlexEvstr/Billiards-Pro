@@ -78,6 +78,7 @@ public class Player_AI : Player {
 		CueController = cue.GetComponent<CueController> ();
 		CueController.owner = this;
 
+		//CueController.InitCueStats(PlayerInfo.Instance.SelectedCue);
 		CueController.SetStats (PlayerInfo.Instance.SelectedCue);
 	}
 

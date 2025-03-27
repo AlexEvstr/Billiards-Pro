@@ -77,19 +77,19 @@ public class AppStoreManager : SingletonMonoBehavior<AppStoreManager>
         DontDestroyOnLoad(this.gameObject);
     }
 
-    IEnumerator Start()
-    {
-        Prefs.LaunchCounter++;
+    //IEnumerator Start()
+    //{
+    //    Prefs.LaunchCounter++;
 
-        if (Prefs.LaunchCounter == showRatePopupAfterLaunches && !IsStoreListingVisited)
-        {
-            yield return new WaitForSeconds(0.25f);
+    //    if (Prefs.LaunchCounter == showRatePopupAfterLaunches && !IsStoreListingVisited)
+    //    {
+    //        yield return new WaitForSeconds(0.25f);
 
-            ShowRatingPopup();
+    //        ShowRatingPopup();
 
-            Prefs.LaunchCounter = 0;
-        }
-    }
+    //        Prefs.LaunchCounter = 0;
+    //    }
+    //}
 
     public void OpenRatingPage()
     {

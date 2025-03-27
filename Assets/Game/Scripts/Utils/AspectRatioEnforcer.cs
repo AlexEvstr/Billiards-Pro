@@ -15,15 +15,17 @@ public class AspectRatioEnforcer : MonoBehaviour {
 
 	private Camera letterBoxCamera;
 
-	void Awake() {
-		CreateLetterBoxCamera ();
+    //void Awake()
+    //{
+    //    CreateLetterBoxCamera();
 
-		foreach (Camera cam in targetCameras) {
-			ForceCameraRatio (cam, targetAspectRatio);
-		}
-	}
+    //    foreach (Camera cam in targetCameras)
+    //    {
+    //        ForceCameraRatio(cam, targetAspectRatio);
+    //    }
+    //}
 
-	private void CreateLetterBoxCamera() {
+    private void CreateLetterBoxCamera() {
 		letterBoxCamera = this.gameObject.AddComponent<Camera> ();
 
 		letterBoxCamera.depth = -2;

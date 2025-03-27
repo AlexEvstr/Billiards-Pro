@@ -7,6 +7,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.UI;
 
 public class CueController : MonoBehaviour {
 
@@ -18,6 +19,7 @@ public class CueController : MonoBehaviour {
 	[SerializeField] private float accuracyModeCueRotSpeed = 1;
 	[SerializeField] private float roateSpeed = 1f;
 	[SerializeField] protected AudioClip hitSound;
+
 
 	//[SyncVar]
 	//public NetworkInstanceId ownerNetId;
@@ -91,9 +93,7 @@ public class CueController : MonoBehaviour {
 	}
 	public bool isReal = false;
 	protected virtual void Start() {
-		
-		
-		
+
 		cueBall = poolManager.CueBall;
 		cueBallRB = cueBall.GetComponent<Rigidbody> ();
 	
@@ -204,6 +204,7 @@ public class CueController : MonoBehaviour {
 
 	protected virtual void OnSliderReleased() {
 		Debug.Log("release");
+		if (!isActive) return;
 		if (cueSlider.Value <= cueSlider.ignoreBelowValue) {
 			return;
 		}
@@ -385,7 +386,7 @@ public class CueController : MonoBehaviour {
 	public void SetStats(string cueId) {
 		CueStats cueStats = PlayerInfo.Instance.GetCue (cueId);
 
-		SetCueSprite (cueStats.CueSprite);
+		//SetCueSprite (cueStats.CueSprite);
 
 		MinStrength = cueStats.MinStrength;
 		MaxStrength = cueStats.MaxStrength;

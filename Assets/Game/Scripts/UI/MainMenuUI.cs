@@ -79,7 +79,7 @@ public class MainMenuUI : MonoBehaviour {
 	}
 
 	private void UpdateProfileImg() {
-		profileImg.sprite = avatars [avatarsList.GetAvatarIndex (PlayerInfo.Instance.PlayerAvatarId)].AvatarSprite;
+		//profileImg.sprite = avatars [avatarsList.GetAvatarIndex (PlayerInfo.Instance.PlayerAvatarId)].AvatarSprite;
 	}
 
 	private void UpdateSoundBtn() {

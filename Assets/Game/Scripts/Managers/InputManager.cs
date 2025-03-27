@@ -56,44 +56,49 @@ public class InputManager : MonoBehaviour {
 			return;
 		}
 
-		#if UNITY_EDITOR || UNITY_STANDALONE || UNITY_WEBPLAYER
-		if (ignoreUI && EventSystem.current.IsPointerOverGameObject ()) {
-			return;
-		}
+		//#if UNITY_EDITOR || UNITY_STANDALONE || UNITY_WEBPLAYER
+		//if (ignoreUI && EventSystem.current.IsPointerOverGameObject ()) {
+		//	return;
+		//}
 
-		if(Input.GetMouseButtonDown(0)) {
-			touchStarted = true;
-			State = TouchState.START;
+		//if(Input.GetMouseButtonDown(0)) {
+		//	touchStarted = true;
+		//	State = TouchState.START;
 
-			StartCoroutine(ResetTouchStateCo());
-		}
-		else if(Input.GetMouseButton(0)) {
-			if(touchStarted) {
-				State = TouchState.STAY;
-			}
-		}
-		else if(Input.GetMouseButtonUp(0)) {
-			touchStarted = false;
-			State = TouchState.END;
+		//	StartCoroutine(ResetTouchStateCo());
+		//}
+		//else if(Input.GetMouseButton(0)) {
+		//	if(touchStarted) {
+		//		State = TouchState.STAY;
+		//	}
+		//}
+		//else if(Input.GetMouseButtonUp(0)) {
+		//	touchStarted = false;
+		//	State = TouchState.END;
 
-			StartCoroutine(ResetTouchStateCo());
-		}
+		//	StartCoroutine(ResetTouchStateCo());
+		//}
 
-		TouchPosition = Input.mousePosition;
+		//TouchPosition = Input.mousePosition;
 
-		float x = Input.GetAxis("Mouse X");
-		float y = Input.GetAxis("Mouse Y");
+		//float x = Input.GetAxis("Mouse X");
+		//float y = Input.GetAxis("Mouse Y");
 
-		DeltaTouchPosition = new Vector2(x, y) * sensitivityMouse;
+		//DeltaTouchPosition = new Vector2(x, y) * sensitivityMouse;
 
-		PointerId = 0;
+		//PointerId = 0;
 
-		#elif UNITY_IOS || UNITY_ANDROID || UNITY_WP8 || UNITY_IPHONE
+//#elif UNITY_IOS || UNITY_ANDROID || UNITY_WP8 || UNITY_IPHONE
+for (int i = 0; i < Input.touchCount; i++) {
+    Touch touch = Input.GetTouch(i);
+   
+}
 		for(int i = 0; i < Input.touchCount; i++) {
 			Touch touch = Input.GetTouch(i);
-			if (ignoreUI && EventSystem.current.IsPointerOverGameObject (touch.fingerId)) {
-				return;
-			}
+			bool overUI = IsPointerOverUIObject(touch.position);
+    if (ignoreUI && overUI) {
+        continue;
+    }
 
 			if(touch.phase == TouchPhase.Began) {
 				touchStarted = true;
@@ -116,8 +121,19 @@ public class InputManager : MonoBehaviour {
 			PointerId = touch.fingerId;
 		}
 
-		#endif
+//#endif
 	}
+
+
+	public static bool IsPointerOverUIObject(Vector2 screenPosition)
+	{
+		PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current);
+		eventDataCurrentPosition.position = screenPosition;
+		List<RaycastResult> results = new List<RaycastResult>();
+		EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
+		return results.Count > 0;
+	}
+
 
 	public void IgnoreUI(bool ignore) {
 		ignoreUI = ignore;

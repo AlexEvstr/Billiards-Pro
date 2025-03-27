@@ -5,55 +5,64 @@
 
 using UnityEngine;
 
-public class Player_Local : Player {
+public class Player_Local : Player
+{
 
-	protected override void Start() {
-		base.Start ();
+	protected override void Start()
+	{
+		base.Start();
 
-		poolManager.AddPlayer (this);
+		poolManager.AddPlayer(this);
 
-		if (playerId == "1") {
+		if (playerId == "1")
+		{
 			ui = gameUI.player1UI;
 		}
-		else if (playerId == "2") {
+		else if (playerId == "2")
+		{
 			ui = gameUI.player2UI;
 		}
 
 		PlayerAvatar avatar;
-		if (!PoolManager_Local.isAgainstAI) {
+		if (!PoolManager_Local.isAgainstAI)
+		{
 			playerName = "PLAYER " + playerId;
 			avatar = PlayerInfo.Instance.DefaultAvatar;
 		}
-		else {
+		else
+		{
 			playerName = PlayerInfo.Instance.PlayerName;
 			avatar = PlayerInfo.Instance.SelectedAvatar;
 		}
 
-		ui.SetNameTxt (playerName);
-		ui.SetAvatar (avatar.AvatarSprite);
+		//ui.SetNameTxt(playerName);
+		//ui.SetAvatar(avatar.AvatarSprite);
 
-		CreateCue ();
+		CreateCue();
 	}
 
-	public override void TakeTurn () {
-		base.TakeTurn ();
+	public override void TakeTurn()
+	{
+		base.TakeTurn();
 
-		inputManager.Unlock ();
+		inputManager.Unlock();
 	}
 
-	public override void EndTurn (bool timeFoul = false) {
-		base.EndTurn (timeFoul);
+	public override void EndTurn(bool timeFoul = false)
+	{
+		base.EndTurn(timeFoul);
 
-		inputManager.Lock ();
-		gameUI.cueSlider.ResetSlider ();
+		inputManager.Lock();
+		gameUI.cueSlider.ResetSlider();
 	}
 
-	private void CreateCue() {
-		cue = Instantiate (cuePrefab);
-		CueController = cue.GetComponent<CueController> ();
+	private void CreateCue()
+	{
+		cue = Instantiate(cuePrefab);
+		CueController = cue.GetComponent<CueController>();
 		CueController.owner = this;
 
-		CueController.SetStats (PlayerInfo.Instance.SelectedCue);
+		CueController.SetStats(PlayerInfo.Instance.SelectedCue);
 	}
 
 }
