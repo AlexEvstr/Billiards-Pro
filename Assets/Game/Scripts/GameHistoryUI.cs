@@ -12,6 +12,11 @@ public class GameHistoryUI : MonoBehaviour
 
     void Start()
     {
+        UpdateUI();
+    }
+
+    public void UpdateUI()
+    {
         LoadHistory("PlayerGame", playerGameNames, playerGameDates);
         LoadHistory("BotGame", botGameNames, botGameDates);
     }
@@ -36,5 +41,16 @@ public class GameHistoryUI : MonoBehaviour
                 dateTexts[i].text = "-";
             }
         }
+    }
+
+    public void ResetHistory()
+    {
+        for (int i = 0; i < maxRecords; i++)
+        {
+            PlayerPrefs.DeleteKey($"PlayerGame_{i}");
+            PlayerPrefs.DeleteKey($"BotGame_{i}");
+        }
+        PlayerPrefs.Save();
+        UpdateUI();
     }
 }
