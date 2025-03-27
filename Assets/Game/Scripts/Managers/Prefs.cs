@@ -25,7 +25,7 @@ public class Prefs {
 
 	public static string PlayerName {
 		get {
-			string defaultName = "";
+			string defaultName = "Player";
 			return PlayerPrefs.GetString (k_playerName, defaultName);
 		}
 

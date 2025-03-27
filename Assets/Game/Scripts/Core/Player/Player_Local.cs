@@ -36,7 +36,7 @@ public class Player_Local : Player
 			avatar = PlayerInfo.Instance.SelectedAvatar;
 		}
 
-		//ui.SetNameTxt(playerName);
+		ui.SetNameTxt(playerName);
 		//ui.SetAvatar(avatar.AvatarSprite);
 
 		CreateCue();
@@ -62,7 +62,6 @@ public class Player_Local : Player
 		cue = Instantiate(cuePrefab);
 		CueController = cue.GetComponent<CueController>();
 		CueController.owner = this;
-		Debug.Log("SelectedCue: " + PlayerInfo.Instance.SelectedCue); // ← вот сюда
 
 #if UNITY_ANDROID && !UNITY_EDITOR
 StartCoroutine(WaitAndSetCueStats());

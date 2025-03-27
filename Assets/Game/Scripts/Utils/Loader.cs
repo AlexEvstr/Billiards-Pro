@@ -21,6 +21,8 @@ public class Loader : MonoBehaviour
 
     void Awake()
     {
+        
+
         if (PoolSceneManager.Instance == null)
         {
             Instantiate(sceneManagerPrefab);

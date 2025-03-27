@@ -24,6 +24,7 @@ public class PoolSceneManager : SingletonMonoBehavior<PoolSceneManager> {
 
 	private Animator anim;
 
+
 	protected override void Awake () {
 		base.Awake ();
 		DontDestroyOnLoad (this.gameObject);
@@ -34,10 +35,12 @@ public class PoolSceneManager : SingletonMonoBehavior<PoolSceneManager> {
 	}
 
 	public void GoToMainMenu() {
+		PoolManager_Local.isAgainstAI = true;
 		LoadScene (mainMenuSceneName);
 	}
 
-	public void GoToEditProfile() {
+
+    public void GoToEditProfile() {
 		LoadScene (editProfileSceneName);
 	}
 
