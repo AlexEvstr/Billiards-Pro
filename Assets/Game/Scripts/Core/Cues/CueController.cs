@@ -203,7 +203,6 @@ public class CueController : MonoBehaviour {
 	}
 
 	protected virtual void OnSliderReleased() {
-		Debug.Log("release");
 		if (!isActive) return;
 		if (cueSlider.Value <= cueSlider.ignoreBelowValue) {
 			return;

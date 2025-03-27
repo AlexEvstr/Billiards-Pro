@@ -135,6 +135,8 @@ public class PoolManager_Local : PoolManager
         string popupMsg = Formatter.FormatName(winner.playerName) + " has won this match." +
                           "\n\nWant a re-match?";
 
+        GameHistoryManager.SaveResult(winner.playerName);
+
         PopupManager.Instance.ShowPopup(popupHeading, popupMsg, "Re-match", "Quit",
             () =>
             {
