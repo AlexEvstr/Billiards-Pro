@@ -383,10 +383,21 @@ public class CueController : MonoBehaviour {
 		AudioSource.PlayClipAtPoint (hitSound, Camera.main.transform.position);
 	}
 
-	public void SetStats(string cueId) {
-		CueStats cueStats = PlayerInfo.Instance.GetCue (cueId);
+	public void SetStats(string cueId)
+	{
+		var playerInfo = PlayerInfo.Instance;
+		if (playerInfo == null)
+		{
+			Debug.LogWarning("SetStats: PlayerInfo.Instance is null — skipping stat set");
+			return;
+		}
 
-		//SetCueSprite (cueStats.CueSprite);
+		CueStats cueStats = playerInfo.GetCue(cueId);
+		if (cueStats == null)
+		{
+			Debug.LogWarning("SetStats: cueStats is null for cueId " + cueId);
+			return;
+		}
 
 		MinStrength = cueStats.MinStrength;
 		MaxStrength = cueStats.MaxStrength;
@@ -394,6 +405,7 @@ public class CueController : MonoBehaviour {
 		AimLength = cueStats.AimLength;
 		MaxTimePerMove = cueStats.TimePerMove;
 	}
+
 
 	private void SetCueSprite(Sprite sprite) {
 		if (cueSpriteRenderer == null) {

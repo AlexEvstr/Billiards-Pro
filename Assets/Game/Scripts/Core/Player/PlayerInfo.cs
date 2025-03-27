@@ -109,15 +109,26 @@ public class PlayerInfo : SingletonMonoBehavior<PlayerInfo> {
 		}
 	}
 
-	public string SelectedCue {
-		get {
+	public string SelectedCue
+	{
+		get
+		{
+			if (string.IsNullOrEmpty(Prefs.SelectedCue))
+			{
+				Prefs.SelectedCue = "1"; // или другое дефолтное значение
+				PlayerPrefs.Save(); // Сохраним сразу
+				Debug.LogWarning("SelectedCue был пуст. Установлен по умолчанию: 1");
+			}
 			return Prefs.SelectedCue;
 		}
 
-		set {
+		set
+		{
 			Prefs.SelectedCue = value;
+			PlayerPrefs.Save();
 		}
 	}
+
 
 	public CueStats GetCue(string id) {
 		return cuesList.GetCue (id);

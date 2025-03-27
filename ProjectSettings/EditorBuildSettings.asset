@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Game/Scenes/Game_Local.unity
     guid: d6073d1ae53872742845bd910b7aecbf
+  - enabled: 1
+    path: Assets/Game/Scenes/SimpleTu.unity
+    guid: d8f79922df48c3647ac3d677a472d6d4
   m_configObjects: {}

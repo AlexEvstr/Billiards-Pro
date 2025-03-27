@@ -3,6 +3,7 @@
 //
 //  Copyright (c) 2018 Appic Studio
 
+using System.Collections;
 using UnityEngine;
 
 public class Player_Local : Player
@@ -61,8 +62,21 @@ public class Player_Local : Player
 		cue = Instantiate(cuePrefab);
 		CueController = cue.GetComponent<CueController>();
 		CueController.owner = this;
+		Debug.Log("SelectedCue: " + PlayerInfo.Instance.SelectedCue); // ← вот сюда
+
+#if UNITY_ANDROID && !UNITY_EDITOR
+StartCoroutine(WaitAndSetCueStats());
+#else
+		CueController.SetStats(PlayerInfo.Instance.SelectedCue);
+#endif
+	}
+	private IEnumerator WaitAndSetCueStats()
+	{
+		// ждём 1 кадр, чтобы все Awake/Start успели отработать
+		yield return null;
 
 		CueController.SetStats(PlayerInfo.Instance.SelectedCue);
 	}
+
 
 }

@@ -51,11 +51,11 @@ public class MainMenuUI : MonoBehaviour {
 		//PoolSceneManager.Instance.StartOnlineMatch ();
 		PoolSceneManager.Instance.MyLoadScene("OnlineMatchMode");
 	}
-	public void TourmentModeBtn_OnClick()
+	public void TutorialModeBtn_OnClick()
 	{
 		AudioManager.Instance.PlayBtnSound();
 		//PoolSceneManager.Instance.StartOnlineMatch ();
-		PoolSceneManager.Instance.MyLoadScene("TourmentMode");
+		PoolSceneManager.Instance.MyLoadScene("SimpleTu");
 	}
 	public void LanMatchBtn_OnClick() {
 		AudioManager.Instance.PlayBtnSound ();
