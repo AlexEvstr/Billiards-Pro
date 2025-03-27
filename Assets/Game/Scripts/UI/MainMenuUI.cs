@@ -95,4 +95,8 @@ public class MainMenuUI : MonoBehaviour {
 		optionsScrollRect.horizontalNormalizedPosition = value;
 	}
 
+	public void PlayClickSound()
+    {
+		AudioManager.Instance.PlayBtnSound();
+	}
 }

@@ -228,25 +228,38 @@ public class Ball : MonoBehaviour {
 	}
 
 	protected void PlayBallCollisionSound() {
-		audioSrc.volume = 1.0f;
-		audioSrc.clip = ballCollisionSound;
-		audioSrc.Play ();
+		if (PlayerPrefs.GetFloat("SoundsVolume", 1) == 1)
+        {
+			audioSrc.volume = 1.0f;
+			audioSrc.clip = ballCollisionSound;
+			audioSrc.Play();
+		}
+			
 	}
 
 	protected void PlayRailCollisionSound() {
-		audioSrc.volume = 0.5f;
-		audioSrc.clip = railCollisionSound;
-		audioSrc.Play ();
+		if (PlayerPrefs.GetFloat("SoundsVolume", 1) == 1)
+        {
+			audioSrc.volume = 0.5f;
+			audioSrc.clip = railCollisionSound;
+			audioSrc.Play();
+		}
+			
 	}
 
 	protected void PlayPocketSound() {
-		audioSrc.volume = 1.0f;
-		audioSrc.clip = pocketSound;
-		audioSrc.Play ();
+		if (PlayerPrefs.GetFloat("SoundsVolume", 1) == 1)
+        {
+			audioSrc.volume = 1.0f;
+			audioSrc.clip = pocketSound;
+			audioSrc.Play();
+		}
+			
 	}
 
 	protected virtual void PlayBallReachedSound() {
-		PlayBallCollisionSound ();
+		if (PlayerPrefs.GetFloat("SoundsVolume", 1) == 1)
+			PlayBallCollisionSound ();
 	}
 
 	protected virtual void SetLayer(int layerNumber) {
@@ -263,7 +276,8 @@ public class Ball : MonoBehaviour {
 	}
 
 	protected virtual void StartCollectorSound() {
-		ballCollector.StartCollectorSound ();
+		if (PlayerPrefs.GetFloat("SoundsVolume", 1) == 1)
+			ballCollector.StartCollectorSound ();
 	}
 
 	protected virtual void StopCollectorSound() {

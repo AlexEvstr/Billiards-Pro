@@ -379,7 +379,8 @@ public class CueController : MonoBehaviour {
 	}
 
 	protected virtual void PlayHitSound() {
-		AudioSource.PlayClipAtPoint (hitSound, Camera.main.transform.position);
+		if (PlayerPrefs.GetFloat("SoundsVolume", 1) == 1)
+			AudioSource.PlayClipAtPoint (hitSound, Camera.main.transform.position);
 	}
 
 	public void SetStats(string cueId)

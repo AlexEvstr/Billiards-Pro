@@ -18,6 +18,8 @@ public class AudioManager : SingletonMonoBehavior<AudioManager> {
 		DontDestroyOnLoad (this.gameObject);
 
 		soundsSource = GetComponent<AudioSource> ();
+		soundsSource.volume = PlayerPrefs.GetFloat("SoundsVolume", soundsSource.volume);
+
 	}
 
 	void Start() {
@@ -35,8 +37,9 @@ public class AudioManager : SingletonMonoBehavior<AudioManager> {
 	}
 
 	public void EnableSound(bool enable) {
-		AudioListener.volume = enable ? 1 : 0;
+		soundsSource.volume = enable ? 1 : 0;
 		Prefs.IsSoundOn = enable;
+		PlayerPrefs.SetFloat("SoundsVolume", soundsSource.volume);
 	}
 
 	public void ToggleSound() {

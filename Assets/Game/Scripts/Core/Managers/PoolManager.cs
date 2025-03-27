@@ -167,7 +167,8 @@ public class PoolManager : MonoBehaviour {
 	}
 
 	protected virtual void StartGame() {
-		PlayRackSound ();
+		if (PlayerPrefs.GetFloat("SoundsVolume", 1) == 1)
+			PlayRackSound ();
 	}
 
 	protected virtual void CreateBalls() {
@@ -243,12 +244,14 @@ public class PoolManager : MonoBehaviour {
 	}
 
 	public virtual void OnTurnTaken(Player player, bool timeFoul) {
-		player.StopTimerSound ();
+		if (PlayerPrefs.GetFloat("SoundsVolume", 1) == 1)
+			player.StopTimerSound ();
 	}
 
 	protected void OnFoul(string reason) {
 		ShowMsg (reason);
-		PlayFoulSound ();
+		if (PlayerPrefs.GetFloat("SoundsVolume", 1) == 1)
+			PlayFoulSound ();
 	}
 
 	protected void ProcessTurn(bool timeFoul) {
@@ -259,7 +262,8 @@ public class PoolManager : MonoBehaviour {
 		yield return StartCoroutine (WaitForBallsCo (0.25f));
 
 		if (timeFoul) {
-			PlayFoulSound ();
+			if (PlayerPrefs.GetFloat("SoundsVolume", 1) == 1)
+				PlayFoulSound ();
 
 			string msg = Formatter.FormatName(CurrentPlayer.playerName) + " ran out of time.";
 			ShowMsg (msg);
