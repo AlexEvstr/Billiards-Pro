@@ -1,9 +1,4 @@
-﻿//  Author:
-//  Salman Younas <salman.younas0007@gmail.com>
-//
-//  Copyright (c) 2018 Appic Studio
-
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "TablesList", menuName = "Tables/TablesList", order = 1)]

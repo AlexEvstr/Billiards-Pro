@@ -38,7 +38,6 @@ public class MenuWindows : MonoBehaviour
 
         float time = 0f;
 
-        // Фаза 1: от начального до пикового масштаба
         while (time < animationDuration)
         {
             float t = time / animationDuration;
@@ -48,7 +47,6 @@ public class MenuWindows : MonoBehaviour
         }
         window.transform.localScale = peakScale;
 
-        // Фаза 2: от пикового до конечного масштаба
         time = 0f;
         while (time < animationDuration)
         {

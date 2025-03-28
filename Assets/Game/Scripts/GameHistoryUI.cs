@@ -3,8 +3,8 @@ using UnityEngine.UI;
 
 public class GameHistoryUI : MonoBehaviour
 {
-    public Text[] playerGameNames; // 5 текстов для победителей
-    public Text[] playerGameDates; // 5 текстов для дат
+    public Text[] playerGameNames;
+    public Text[] playerGameDates;
     public Text[] botGameNames;
     public Text[] botGameDates;
 

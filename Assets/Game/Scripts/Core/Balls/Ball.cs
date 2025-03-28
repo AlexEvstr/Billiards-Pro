@@ -1,12 +1,5 @@
-﻿//  Author:
-//  Salman Younas <salman.younas0007@gmail.com>
-//
-//  Copyright (c) 2018 Appic Studio
-
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 using UnityEngine;
-using UnityEngine.Networking;
 
 public class Ball : MonoBehaviour {
 
@@ -22,6 +15,8 @@ public class Ball : MonoBehaviour {
 	[SerializeField] protected AudioClip railCollisionSound;
 	[SerializeField] protected AudioClip pocketSound;
 	[SerializeField] protected AudioClip ballCollectorSound;
+
+	private MusicAndVibro _musicAndVibro;
 
 	protected PoolManager poolManager;
 	protected Rigidbody rb;
@@ -92,7 +87,12 @@ public class Ball : MonoBehaviour {
 		ballCollector = GameObject.FindObjectOfType<BallCollector> ();
 	}
 
-	protected virtual void Update() {
+    private void Start()
+    {
+		_musicAndVibro = FindAnyObjectByType<MusicAndVibro>();
+	}
+
+    protected virtual void Update() {
 		if (!rb.isKinematic)
 		{
 			if (rb.velocity.y > 0)
@@ -149,7 +149,7 @@ public class Ball : MonoBehaviour {
 		if (col.CompareTag ("Pocket")) {
 			Pocket pocket = col.GetComponent<Pocket> ();
 			PlayPocketSound ();
-
+			_musicAndVibro.PeekVibration();
 			if (isServer) {
 				poolManager.CurrentTurn.AddToPocketedBalls (this);
 				StartCoroutine (PocketCo (pocket));

@@ -1,11 +1,4 @@
-﻿//  Author:
-//  Salman Younas <salman.younas0007@gmail.com>
-//
-//  Copyright (c) 2018 Appic Studio
-
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class SpinMenu : InteractableMonoBehavior, IPointerDownHandler, IPointerUpHandler {

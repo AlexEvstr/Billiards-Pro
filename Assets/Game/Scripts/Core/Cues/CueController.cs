@@ -1,13 +1,4 @@
-﻿//  Author:
-//  Salman Younas <salman.younas0007@gmail.com>
-//
-//  Copyright (c) 2018 Appic Studio
-
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Networking;
-using UnityEngine.UI;
+﻿using UnityEngine;
 
 public class CueController : MonoBehaviour {
 
@@ -63,6 +54,8 @@ public class CueController : MonoBehaviour {
 	protected SpinMenu spinMenu;
 	protected SpinKnob spinKnob;
 
+	private MusicAndVibro _musicAndVibro;
+
 	protected bool isActive = false;
 	protected Vector3 initialTouchPos;
 
@@ -99,6 +92,7 @@ public class CueController : MonoBehaviour {
 	
 
 		guideLine.HideGuideLine ();
+		_musicAndVibro = FindAnyObjectByType<MusicAndVibro>();
 	}
 
 	Vector3 targetpos = Vector3.zero;
@@ -381,6 +375,7 @@ public class CueController : MonoBehaviour {
 	protected virtual void PlayHitSound() {
 		if (PlayerPrefs.GetFloat("SoundsVolume", 1) == 1)
 			AudioSource.PlayClipAtPoint (hitSound, Camera.main.transform.position);
+		_musicAndVibro.PeekVibration();
 	}
 
 	public void SetStats(string cueId)

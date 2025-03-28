@@ -15,6 +15,7 @@ public class MusicAndVibro : MonoBehaviour
         Vibration.Init();
 
         _musicSource.volume = PlayerPrefs.GetInt("MusicVolume", 1);
+        _isVibro = (PlayerPrefs.GetInt("VibroState", 1));
         if (SceneManager.GetActiveScene().name == "MainMenu")
         {
             if (PlayerPrefs.GetInt("MusicVolume", 1) == 0)
@@ -28,7 +29,6 @@ public class MusicAndVibro : MonoBehaviour
                 _onMusic.SetActive(true);
             }
 
-            _isVibro = (PlayerPrefs.GetInt("VibroState", 1));
             if (PlayerPrefs.GetInt("VibroState", 1) == 0)
             {
                 _onVibration.SetActive(false);

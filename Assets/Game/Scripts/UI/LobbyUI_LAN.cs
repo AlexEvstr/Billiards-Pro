@@ -1,12 +1,6 @@
-﻿//  Author:
-//  Salman Younas <salman.younas0007@gmail.com>
-//
-//  Copyright (c) 2018 Appic Studio
-
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.Networking;
 
 public class LobbyUI_LAN : MonoBehaviour {
 

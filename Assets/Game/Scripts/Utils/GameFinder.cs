@@ -1,13 +1,4 @@
-﻿//  Author:
-//  Salman Younas <salman.younas0007@gmail.com>
-//
-//  Copyright (c) 2018 Appic Studio
-
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Networking;
-//using UnityEngine.Networking.Match;
+﻿using UnityEngine;
 
 public class GameFinder : SingletonMonoBehavior<GameFinder> {
 

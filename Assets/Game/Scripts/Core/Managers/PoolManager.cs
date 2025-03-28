@@ -656,7 +656,8 @@ public class PoolManager : MonoBehaviour {
 				}
 				else {
 					playerTimer.TimerImage.color = playerTimer.lowColor;
-					playerTimer.StartTickSound ();
+					if (PlayerPrefs.GetFloat("SoundsVolume", 1) == 1)
+						playerTimer.StartTickSound ();
 				}
 			}
 

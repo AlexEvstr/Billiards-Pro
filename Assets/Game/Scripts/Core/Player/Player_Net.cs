@@ -1,11 +1,4 @@
-﻿//  Author:
-//  Salman Younas <salman.younas0007@gmail.com>
-//
-//  Copyright (c) 2018 Appic Studio
-
-using System.Collections;
-using UnityEngine;
-using UnityEngine.Networking;
+﻿using UnityEngine;
 
 public class Player_Net : Player {
 

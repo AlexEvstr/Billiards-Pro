@@ -805,6 +805,146 @@ PrefabInstance:
       propertyPath: poolManager
       value: 
       objectReference: {fileID: 681553850}
+    - target: {fileID: 114052763152735624, guid: 18e86e20f35113145b5be8f271debb64,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114052763152735624, guid: 18e86e20f35113145b5be8f271debb64,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114052763152735624, guid: 18e86e20f35113145b5be8f271debb64,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1396091193}
+    - target: {fileID: 114052763152735624, guid: 18e86e20f35113145b5be8f271debb64,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114052763152735624, guid: 18e86e20f35113145b5be8f271debb64,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PopVibration
+      objectReference: {fileID: 0}
+    - target: {fileID: 114052763152735624, guid: 18e86e20f35113145b5be8f271debb64,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: MusicAndVibro, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 114052763152735624, guid: 18e86e20f35113145b5be8f271debb64,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114536020948235218, guid: 18e86e20f35113145b5be8f271debb64,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114536020948235218, guid: 18e86e20f35113145b5be8f271debb64,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114536020948235218, guid: 18e86e20f35113145b5be8f271debb64,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1396091193}
+    - target: {fileID: 114536020948235218, guid: 18e86e20f35113145b5be8f271debb64,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114536020948235218, guid: 18e86e20f35113145b5be8f271debb64,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PopVibration
+      objectReference: {fileID: 0}
+    - target: {fileID: 114536020948235218, guid: 18e86e20f35113145b5be8f271debb64,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: MusicAndVibro, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 114536020948235218, guid: 18e86e20f35113145b5be8f271debb64,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114845881497038700, guid: 18e86e20f35113145b5be8f271debb64,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114845881497038700, guid: 18e86e20f35113145b5be8f271debb64,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114845881497038700, guid: 18e86e20f35113145b5be8f271debb64,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1396091193}
+    - target: {fileID: 114845881497038700, guid: 18e86e20f35113145b5be8f271debb64,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114845881497038700, guid: 18e86e20f35113145b5be8f271debb64,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PopVibration
+      objectReference: {fileID: 0}
+    - target: {fileID: 114845881497038700, guid: 18e86e20f35113145b5be8f271debb64,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: MusicAndVibro, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 114845881497038700, guid: 18e86e20f35113145b5be8f271debb64,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114889861906569016, guid: 18e86e20f35113145b5be8f271debb64,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114889861906569016, guid: 18e86e20f35113145b5be8f271debb64,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114889861906569016, guid: 18e86e20f35113145b5be8f271debb64,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1396091193}
+    - target: {fileID: 114889861906569016, guid: 18e86e20f35113145b5be8f271debb64,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114889861906569016, guid: 18e86e20f35113145b5be8f271debb64,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PopVibration
+      objectReference: {fileID: 0}
+    - target: {fileID: 114889861906569016, guid: 18e86e20f35113145b5be8f271debb64,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: MusicAndVibro, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 114889861906569016, guid: 18e86e20f35113145b5be8f271debb64,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 114904142868567452, guid: 18e86e20f35113145b5be8f271debb64,
         type: 3}
       propertyPath: poolManager

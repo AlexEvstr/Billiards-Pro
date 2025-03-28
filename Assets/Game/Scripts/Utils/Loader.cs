@@ -1,11 +1,4 @@
-﻿//  Author:
-//  Salman Younas <salman.younas0007@gmail.com>
-//
-//  Copyright (c) 2018 Appic Studio
-
-using UnityEngine;
-using UnityEngine.EventSystems;
-using UnityEngine.Networking;
+﻿using UnityEngine;
 
 public class Loader : MonoBehaviour
 {

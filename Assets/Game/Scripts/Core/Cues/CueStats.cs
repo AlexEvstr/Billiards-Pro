@@ -1,9 +1,4 @@
-﻿//  Author:
-//  Salman Younas <salman.younas0007@gmail.com>
-//
-//  Copyright (c) 2018 Appic Studio
-
-using UnityEngine;
+﻿using UnityEngine;
 
 [CreateAssetMenu(fileName = "CueStats", menuName = "Cues/CueStatsObject", order = 1)]
 public class CueStats : ScriptableObject {
